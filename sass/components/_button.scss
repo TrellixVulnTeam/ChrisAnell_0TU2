@@ -1,0 +1,95 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border-radius: 9rem;
+    display: inline-block;
+    font-size: $default-font-size;
+    padding: 1.5rem 3rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+
+    // Change for <button> element
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba($color-dark, 0.85);
+    transform: translateY(-3px);
+
+    &::after {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.85);
+    transform: translateY(-1.5px);
+  }
+
+  &--dark {
+    background-color: $color-dark;
+    color: #fff;
+    font-weight: 400;
+
+    &::after {
+      background-color: $color-dark;
+    }
+  }
+
+  &::after {
+    border-radius: 9rem;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &--animated {
+    animation: fadeIn 1s ease-in 0.7s;
+    animation-fill-mode: backwards;
+  }
+
+  &--card {
+    box-shadow: 0 0.5rem 1rem rgba($color-dark, 0.5);
+    color: $color-dark;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
+    display: inline-block;
+    font-size: $default-font-size;
+    font-weight: 700;
+    padding: 0 3px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-dark, $alpha: 0.15);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-dark, $alpha: 0.15);
+    transform: translateY(0);
+  }
+}

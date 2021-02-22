@@ -1,0 +1,88 @@
+body {
+  color: $color-dark;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.heading-primary {
+  color: $color-dark;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+
+  &--main {
+    animation: fadeIn 1s ease-in;
+    display: block;
+    font-size: 6rem;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+      letter-spacing: 0.7rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+      letter-spacing: 0;
+    }
+  }
+
+  &--sub {
+    animation: fadeIn 1s ease-in;
+    display: block;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.12rem;
+
+    @include respond(tab-land) {
+      font-size: 2.3rem;
+      letter-spacing: 0;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.heading-secondary {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, $color-primary, $color-secondary);
+  color: transparent;
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  &--colorless {
+    background-image: linear-gradient(
+      to left,
+      $color-dark,
+      $color-grey-darker-1
+    );
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

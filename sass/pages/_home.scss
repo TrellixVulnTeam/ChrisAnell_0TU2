@@ -1,0 +1,98 @@
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 10rem 0;
+
+  @include respond(tab-port) {
+    padding: 5rem;
+  }
+}
+
+.section-cards {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba($color-primary, 0.85),
+      rgba($color-secondary, 0.85)
+    ),
+    url(../img/family.jpeg);
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 75vh);
+  padding: 10rem 0;
+
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+    padding: 5rem;
+  }
+}
+
+.section-testimonials {
+  background-color: $color-grey-light-1;
+  padding: 6rem 0;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+}
+
+.section-contact {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($color-primary, 0.85),
+    rgba($color-secondary, 0.85)
+  );
+  height: auto;
+  padding: 10rem 0;
+
+  @include respond(tab-port) {
+    padding: 5rem;
+  }
+}
+
+.contact {
+  background-image: linear-gradient(
+      125deg,
+      rgba($color-grey-light-1, 0.7) 0%,
+      rgba($color-grey-light-1, 0.7) 50%,
+      transparent 50%
+    ),
+    url(../img/cindy.jpg);
+  background-position: 25% 77%;
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1rem 2rem rgba($color: $color-dark, $alpha: 0.5);
+  margin-top: 7vh;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        125deg,
+        rgba($color-grey-light-1, 0.7) 0%,
+        rgba($color-grey-light-1, 0.7) 65%,
+        transparent 65%
+      ),
+      url(../img/cindy.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-grey-light-1, 0.7) 0%,
+        rgba($color-grey-light-1, 0.7) 100%
+      ),
+      url(../img/cindy.jpg);
+  }
+
+  &__form {
+    padding: 6rem;
+    width: 50%;
+
+    @include respond(tab-land) {
+      width: 65%;
+    }
+
+    @include respond(tab-port) {
+      padding: 3rem;
+      width: 100%;
+    }
+  }
+}
